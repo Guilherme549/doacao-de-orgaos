@@ -1,66 +1,197 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📘 Documentação das Rotas da API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Esta API segue o padrão RESTful e utiliza os métodos HTTP **GET**, **POST**, **PUT** e **DELETE** para realizar operações de CRUD (Criar, Ler, Atualizar e Excluir). A URL base para as rotas é:
 
-## About Laravel
+http://127.0.0.1:8000/api
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+yaml
+Copiar código
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🔥 1. Rotas de Usuários
 
-## Learning Laravel
+| **Método** | **Rota**         | **Descrição**             | **Parâmetros**                   |
+|------------|------------------|---------------------------|-----------------------------------|
+| GET        | `/users`          | Listar todos os usuários  | -                                 |
+| POST       | `/users`          | Criar um novo usuário     | `name`, `email`, `password`      |
+| GET        | `/users/{id}`     | Ver detalhes de um usuário| `id` (ID do usuário)              |
+| PUT        | `/users/{id}`     | Atualizar um usuário      | `name`, `email`, `password`      |
+| DELETE     | `/users/{id}`     | Excluir um usuário        | `id` (ID do usuário)              |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🔥 2. Rotas de Perfis
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| **Método** | **Rota**         | **Descrição**             | **Parâmetros**                  |
+|------------|------------------|---------------------------|----------------------------------|
+| GET        | `/profiles`       | Listar todos os perfis    | -                                |
+| POST       | `/profiles`       | Criar um novo perfil      | `name`                           |
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🔥 3. Rotas de Endereços
 
-### Premium Partners
+| **Método** | **Rota**         | **Descrição**             | **Parâmetros**                  |
+|------------|------------------|---------------------------|----------------------------------|
+| GET        | `/addresses`      | Listar todos os endereços | -                                |
+| POST       | `/addresses`      | Criar um novo endereço    | `street`, `city`, `state`, `zip_code` |
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+## 🔥 4. Rotas de Órgãos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| **Método** | **Rota**         | **Descrição**             | **Parâmetros**                  |
+|------------|------------------|---------------------------|----------------------------------|
+| GET        | `/organs`         | Listar todos os órgãos    | -                                |
+| POST       | `/organs`         | Criar um novo órgão       | `name`, `description`            |
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🔥 5. Rotas de Hospitais
 
-## Security Vulnerabilities
+| **Método** | **Rota**         | **Descrição**             | **Parâmetros**                  |
+|------------|------------------|---------------------------|----------------------------------|
+| GET        | `/hospitals`      | Listar todos os hospitais | -                                |
+| POST       | `/hospitals`      | Criar um novo hospital    | `name`, `city`, `state`          |
+| DELETE     | `/hospitals/{id}` | Excluir um hospital       | `id` (ID do hospital)            |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🔥 6. Rotas de Relação Usuário-Órgão
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| **Método** | **Rota**         | **Descrição**                         | **Parâmetros**                    |
+|------------|------------------|---------------------------------------|-----------------------------------|
+| POST       | `/user-organ`     | Relacionar usuário a um órgão        | `user_id`, `organ_id`             |
+
+---
+
+## 🔥 7. Rotas de Relação Hospital-Usuário
+
+| **Método** | **Rota**         | **Descrição**                         | **Parâmetros**                    |
+|------------|------------------|---------------------------------------|-----------------------------------|
+| POST       | `/hospital-user`  | Relacionar usuário a um hospital     | `user_id`, `hospital_id`          |
+
+---
+
+## 📍 Exemplos de uso da API
+
+### 1️⃣ - Listar todos os usuários
+
+**URL:**
+GET http://127.0.0.1:8000/api/users
+
+css
+Copiar código
+
+**Exemplo de resposta de sucesso:**
+```json
+[
+    {
+        "id": 1,
+        "name": "João da Silva",
+        "email": "joao@email.com",
+        "created_at": "2024-12-08T18:00:00.000000Z",
+        "updated_at": "2024-12-08T18:00:00.000000Z"
+    }
+]
+2️⃣ - Criar um novo usuário
+URL:
+
+arduino
+Copiar código
+POST http://127.0.0.1:8000/api/users
+Corpo da requisição (JSON):
+
+json
+Copiar código
+{
+    "name": "Maria",
+    "email": "maria@email.com",
+    "password": "12345678"
+}
+Exemplo de resposta de sucesso:
+
+json
+Copiar código
+{
+    "id": 2,
+    "name": "Maria",
+    "email": "maria@email.com",
+    "created_at": "2024-12-08T18:00:00.000000Z",
+    "updated_at": "2024-12-08T18:00:00.000000Z"
+}
+3️⃣ - Atualizar um usuário
+URL:
+
+ruby
+Copiar código
+PUT http://127.0.0.1:8000/api/users/1
+Corpo da requisição (JSON):
+
+json
+Copiar código
+{
+    "name": "João Atualizado"
+}
+Exemplo de resposta de sucesso:
+
+json
+Copiar código
+{
+    "id": 1,
+    "name": "João Atualizado",
+    "email": "joao@email.com",
+    "created_at": "2024-12-08T18:00:00.000000Z",
+    "updated_at": "2024-12-08T18:05:00.000000Z"
+}
+4️⃣ - Excluir um usuário
+URL:
+
+ruby
+Copiar código
+DELETE http://127.0.0.1:8000/api/users/1
+Exemplo de resposta de sucesso:
+
+json
+Copiar código
+{
+    "message": "User deleted successfully"
+}
+📢 Instruções Gerais para Testar a API
+1️⃣ - Ferramentas de Teste
+Postman (recomendado)
+Insomnia
+Navegador (para requisições GET)
+cURL (via terminal)
+2️⃣ - Testar a API no Postman
+URL Base:
+
+arduino
+Copiar código
+http://127.0.0.1:8000/api
+Passos:
+
+Abra o Postman.
+Escolha o método HTTP (GET, POST, PUT, DELETE).
+Cole a URL completa (ex: http://127.0.0.1:8000/api/users).
+Adicione o corpo da requisição (para POST e PUT).
+Clique em Send e visualize a resposta da API.
+3️⃣ - Autenticação de Usuário
+Se a API utilizar Laravel Sanctum ou JWT, você precisará seguir estes passos:
+
+Fazer login e obter o token de autenticação.
+Enviar o token no Authorization Header em todas as requisições.
+Exemplo de Header:
+
+css
+Copiar código
+Authorization: Bearer {seu_token}
+📄 Contribuição
+Se você quiser contribuir para este projeto, siga as etapas abaixo:
+
+Faça um fork deste repositório.
+Crie uma branch com a sua feature (git checkout -b feature/sua-feature).
+Faça commit das suas alterações (git commit -m 'Adiciona nova feature').
+Faça o push para a branch (git push origin feature/sua-feature).
+Abra um Pull Request.
