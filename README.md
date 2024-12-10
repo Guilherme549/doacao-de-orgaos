@@ -1,3 +1,12 @@
+Alunos
+
+Guilherme Francisco Alves Ribeiro - 2210748
+Kevin Fonseca- 2212151
+Arthur Augustinho dos Anjos-2210974
+Antonio Martins da Costa Filho-2212231
+
+
+
 # 📘 Documentação das Rotas da API
 
 Esta API segue o padrão RESTful e utiliza os métodos HTTP **GET**, **POST**, **PUT** e **DELETE** para realizar operações de CRUD (Criar, Ler, Atualizar e Excluir). A URL base para as rotas é:
